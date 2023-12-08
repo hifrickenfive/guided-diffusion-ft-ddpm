@@ -1,10 +1,12 @@
 import argparse
 import inspect
 
-from . import gaussian_diffusion as gd
-from .respace import SpacedDiffusion, space_timesteps
-from .unet import SuperResModel, UNetModel, EncoderUNetModel
+import gaussian_diffusion as gd
+from respace import SpacedDiffusion, space_timesteps
+from unet import SuperResModel, UNetModel, EncoderUNetModel
 
+from diffusion import Model
+from args_config_parser import create_config
 NUM_CLASSES = 1000
 
 
@@ -96,24 +98,28 @@ def create_model_and_diffusion(
     use_fp16,
     use_new_attention_order,
 ):
-    model = create_model(
-        image_size,
-        num_channels,
-        num_res_blocks,
-        channel_mult=channel_mult,
-        learn_sigma=learn_sigma,
-        class_cond=class_cond,
-        use_checkpoint=use_checkpoint,
-        attention_resolutions=attention_resolutions,
-        num_heads=num_heads,
-        num_head_channels=num_head_channels,
-        num_heads_upsample=num_heads_upsample,
-        use_scale_shift_norm=use_scale_shift_norm,
-        dropout=dropout,
-        resblock_updown=resblock_updown,
-        use_fp16=use_fp16,
-        use_new_attention_order=use_new_attention_order,
-    )
+    # model = create_model(
+    #     image_size,
+    #     num_channels,
+    #     num_res_blocks,
+    #     channel_mult=channel_mult,
+    #     learn_sigma=learn_sigma,
+    #     class_cond=class_cond,
+    #     use_checkpoint=use_checkpoint,
+    #     attention_resolutions=attention_resolutions,
+    #     num_heads=num_heads,
+    #     num_head_channels=num_head_channels,
+    #     num_heads_upsample=num_heads_upsample,
+    #     use_scale_shift_norm=use_scale_shift_norm,
+    #     dropout=dropout,
+    #     resblock_updown=resblock_updown,
+    #     use_fp16=use_fp16,
+    #     use_new_attention_order=use_new_attention_order,
+    # )
+    # HACK Override the above with DDRM's model
+    config = create_config('bedroom.yml')
+    model = Model(config)
+
     diffusion = create_gaussian_diffusion(
         steps=diffusion_steps,
         learn_sigma=learn_sigma,
@@ -367,7 +373,8 @@ def sr_create_model(
         image_size=large_size,
         in_channels=3,
         model_channels=num_channels,
-        out_channels=(3 if not learn_sigma else 6),
+        # out_channels=(3 if not learn_sigma else 6),
+        out_channels = 3,
         num_res_blocks=num_res_blocks,
         attention_resolutions=tuple(attention_ds),
         dropout=dropout,

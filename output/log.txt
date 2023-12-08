@@ -1,0 +1,101 @@
+Logging to output/
+creating model and diffusion...
+creating data loader...
+training...
+loading model from checkpoint: /home/ubuntu/ddrm_test/exp10/logs/diffusion_models_converted/ema_diffusion_lsun_bedroom_model/model-2388000.ckpt...
+-------------------------
+| grad_norm  | 0.437    |
+| loss       | 0.0632   |
+| loss_q0    | 0.123    |
+| loss_q1    | 0.00664  |
+| loss_q3    | 1.53e-05 |
+| mse        | 0.0632   |
+| mse_q0     | 0.123    |
+| mse_q1     | 0.00664  |
+| mse_q3     | 1.53e-05 |
+| param_norm | 360      |
+| samples    | 9.55e+06 |
+| step       | 2.39e+06 |
+-------------------------
+saving model 0...
+saving model 0.9999...
+-------------------------
+| grad_norm  | 0.0781   |
+| loss       | 0.0193   |
+| loss_q0    | 0.0562   |
+| loss_q1    | 0.00877  |
+| loss_q2    | 0.00154  |
+| loss_q3    | 0.000132 |
+| mse        | 0.0193   |
+| mse_q0     | 0.0562   |
+| mse_q1     | 0.00877  |
+| mse_q2     | 0.00154  |
+| mse_q3     | 0.000132 |
+| param_norm | 360      |
+| samples    | 9.55e+06 |
+| step       | 2.39e+06 |
+-------------------------
+-------------------------
+| grad_norm  | 0.0493   |
+| loss       | 0.0107   |
+| loss_q0    | 0.0495   |
+| loss_q1    | 0.00738  |
+| loss_q2    | 0.0012   |
+| loss_q3    | 0.000101 |
+| mse        | 0.0107   |
+| mse_q0     | 0.0495   |
+| mse_q1     | 0.00738  |
+| mse_q2     | 0.0012   |
+| mse_q3     | 0.000101 |
+| param_norm | 360      |
+| samples    | 9.55e+06 |
+| step       | 2.39e+06 |
+-------------------------
+-------------------------
+| grad_norm  | 0.0883   |
+| loss       | 0.0223   |
+| loss_q0    | 0.078    |
+| loss_q1    | 0.00682  |
+| loss_q2    | 0.00112  |
+| loss_q3    | 0.000151 |
+| mse        | 0.0223   |
+| mse_q0     | 0.078    |
+| mse_q1     | 0.00682  |
+| mse_q2     | 0.00112  |
+| mse_q3     | 0.000151 |
+| param_norm | 360      |
+| samples    | 9.55e+06 |
+| step       | 2.39e+06 |
+-------------------------
+-------------------------
+| grad_norm  | 0.113    |
+| loss       | 0.0192   |
+| loss_q0    | 0.0663   |
+| loss_q1    | 0.00698  |
+| loss_q2    | 0.00138  |
+| loss_q3    | 0.000141 |
+| mse        | 0.0192   |
+| mse_q0     | 0.0663   |
+| mse_q1     | 0.00698  |
+| mse_q2     | 0.00138  |
+| mse_q3     | 0.000141 |
+| param_norm | 360      |
+| samples    | 9.55e+06 |
+| step       | 2.39e+06 |
+-------------------------
+-------------------------
+| grad_norm  | 0.136    |
+| loss       | 0.0236   |
+| loss_q0    | 0.0851   |
+| loss_q1    | 0.00623  |
+| loss_q2    | 0.00127  |
+| loss_q3    | 0.000135 |
+| mse        | 0.0236   |
+| mse_q0     | 0.0851   |
+| mse_q1     | 0.00623  |
+| mse_q2     | 0.00127  |
+| mse_q3     | 0.000135 |
+| param_norm | 360      |
+| samples    | 9.55e+06 |
+| step       | 2.39e+06 |
+-------------------------

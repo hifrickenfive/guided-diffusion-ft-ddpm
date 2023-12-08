@@ -8,10 +8,10 @@ import torch.distributed as dist
 from torch.nn.parallel.distributed import DistributedDataParallel as DDP
 from torch.optim import AdamW
 
-from . import dist_util, logger
-from .fp16_util import MixedPrecisionTrainer
-from .nn import update_ema
-from .resample import LossAwareSampler, UniformSampler
+import dist_util, logger
+from fp16_util import MixedPrecisionTrainer
+from nn import update_ema
+from resample import LossAwareSampler, UniformSampler
 
 # For ImageNet experiments, this was a good default value.
 # We found that the lg_loss_scale quickly climbed to
@@ -265,7 +265,7 @@ def parse_resume_step_from_filename(filename):
         return 0
     split1 = split[-1].split(".")[0]
     try:
-        return int(split1)
+        return abs(int(split1)) # for cases where chkpt appended with dash in filename e.g. model-99999.pt
     except ValueError:
         return 0
 
