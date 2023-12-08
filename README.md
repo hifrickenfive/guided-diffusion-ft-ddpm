@@ -1,14 +1,13 @@
 # guided-diffusion-ft-ddpm
-This is fork of OpenAI's guided diffusion was created to fine tune the pytorch implementation of (Denoising Diffusion Probabilistic Models) DDPM whose checkpoints would be compatible with Denoising Diffusion Restoration Models (DDRM). The pytorch model for DDPM is inserted into Guided Diffusion's training loop.
+This is a fork of OpenAI's guided diffusion was created to fine tune the pytorch implementation of (Denoising Diffusion Probabilistic Models) DDPM whose checkpoints would be compatible with Denoising Diffusion Restoration Models (DDRM). The pytorch model for DDPM is inserted into Guided Diffusion's training loop. Links to those repositories below.
 
-[openai/guided-diffusion](https://github.com/openai/guided-diffusion)
-[Denoising Diffusion Restoration Models](https://github.com/bahjat-kawar/ddrm)
-[pytorch_diffusion](https://github.com/pesser/pytorch\_diffusion)
-
-Pretrained checkpoints for LSUN bedroom model sourced from https://heibox.uni-heidelberg.de/f/b95206528f384185889b/?dl=1
+1. [openai/guided-diffusion](https://github.com/openai/guided-diffusion)
+1. [Denoising Diffusion Restoration Models](https://github.com/bahjat-kawar/ddrm)
+1. [pytorch_diffusion](https://github.com/pesser/pytorch\_diffusion)
 
 # Getting started
-Run guided_diffusion/image_train.py with the following arguments for bedrooms
+1. Download the pretrained checkpoints for LSUN bedroom model from https://heibox.uni-heidelberg.de/f/b95206528f384185889b/?dl=1
+1. Run guided_diffusion/image_train.py with the following arguments for bedrooms
 
         "args": [
             // BEDROOMS
