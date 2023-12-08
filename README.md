@@ -1,5 +1,5 @@
 # guided-diffusion-ft-ddpm
-This is a fork of OpenAI's guided diffusion was created to fine tune the pytorch implementation of (Denoising Diffusion Probabilistic Models) DDPM whose checkpoints would be compatible with Denoising Diffusion Restoration Models (DDRM). The pytorch model for DDPM is inserted into Guided Diffusion's training loop. Links to those repositories below.
+This fork of OpenAI's guided diffusion was created to fine tune the pytorch implementation of (Denoising Diffusion Probabilistic Models) DDPM whose checkpoints would be compatible with Denoising Diffusion Restoration Models (DDRM). The pytorch model for DDPM is inserted into Guided Diffusion's training loop. Links to those repositories below.
 
 1. [openai/guided-diffusion](https://github.com/openai/guided-diffusion)
 1. [Denoising Diffusion Restoration Models](https://github.com/bahjat-kawar/ddrm)
